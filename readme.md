@@ -1,1 +1,1 @@
-A template readme file to be filled in upon the start and finish of a new project.
+A small project to practice turning a template into an actual site. Based on the template found on colorlib. https://colorlib.com/etc/regform/colorlib-regform-23/
