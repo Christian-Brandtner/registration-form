@@ -117,37 +117,38 @@ body .main-form label {
   flex-direction: column;
   position: relative;
   display: block;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
 }
 body .main-form label .form-label {
+  z-index: 2;
+  transform: translateY(10px);
   position: absolute;
-  font-size: 16px;
+  font-size: 15px;
   transition: font-size 0.3s, transform 0.3s;
+  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 body .main-form label:focus-within .form-label {
-  transform: translateY(-22px) translateX(-10px) scale(0.8);
+  transform: translateY(-14px) translateX(-10px) scale(0.8);
 }
 body .main-form label:focus-within .border {
   background: white;
 }
 body .main-form label input {
+  z-index: 2;
   width: 100%;
   background-color: transparent;
-  height: 2em;
+  height: 43px;
   outline: none;
   color: white;
   font-size: 18px;
 }
-body .main-form label:focus .border {
-  background-color: red;
-}
 body .main-form label .border {
   display: block;
-  background: #0d99d7;
+  background: #00ade6;
   width: 100%;
   height: 2px;
 }/*# sourceMappingURL=main.css.map */
