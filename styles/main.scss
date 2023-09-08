@@ -102,8 +102,9 @@ body {
             .button-text {
                 z-index: 2;
             }
+
             .slide-bg {
-            
+
                 position: absolute;
                 background: #2098D1;
                 width: 100%;
@@ -111,10 +112,12 @@ body {
                 transform: translateX(-100%);
                 transition: transform 0.3s;
             }
+
             .fa-arrow-right {
                 transform: translateX(50%);
                 transition: transform 0.2s;
             }
+
             &:hover {
                 .fa-arrow-right {
                     transform: translateX(80%);
@@ -129,36 +132,25 @@ body {
                 border: none;
             }
         }
-
         label {
             color: #00ade6;
             display: flex;
             flex-direction: column;
-
             position: relative;
             display: block;
             margin-bottom: 3em;
-
+        
             .form-label {
                 z-index: 2;
                 transform: translateY(10px);
                 position: absolute;
+                left: 0;
                 font-size: 15px;
                 transition: font-size 0.3s, transform 0.3s;
                 pointer-events: none;
                 user-select: none;
             }
-
-            &:focus-within {
-
-                .form-label {
-                    transform: translateY(-14px) translateX(-10px) scale(0.8);
-                }
-                .border {
-                    background: white;
-                }
-            }
-
+        
             input {
                 z-index: 2;
                 width: 100%;
@@ -167,17 +159,34 @@ body {
                 outline: none;
                 color: white;
                 font-size: 18px;
+        
+                /* Apply the styles for :focus and :valid */
+                &:focus,
+                &:valid {
+                    
+                    & + .form-label {
+                        transform:translateX(-10px) translateY(-15px) scale(.8);
+                        & + .border {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
             }
-
-           
-
+            
             .border {
                 display: block;
                 background: #00ade6;
                 width: 100%;
                 height: 2px;
+                transition: background-color 0.3s;
+            }
+            &:focus-within {
+                .border {
+                    background-color: white;
+                }
             }
         }
+        
 
     }
 }
