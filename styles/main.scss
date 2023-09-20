@@ -29,6 +29,13 @@ p {
     line-height: 1.8;
 }
 
+@media screen and (min-width: 768.11) {
+    .contact-container {
+        height: 512px;
+    
+    }
+}
+
 body {
     min-height: 100vh;
     background: url("../assets/images/bg-registration-form-7.jpg") no-repeat;
@@ -47,7 +54,7 @@ body {
         padding: 77px 99px 87px;
         width: 540px;
         max-width: 758px;
-        height: 512px;
+       
         background: #39459b;
 
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -114,13 +121,13 @@ body {
             }
 
             .fa-arrow-right {
-                transform: translateX(50%);
+                transform: translateX(65%);
                 transition: transform 0.2s;
             }
 
             &:hover {
                 .fa-arrow-right {
-                    transform: translateX(80%);
+                    transform: translateX(95%);
                 }
 
                 .slide-bg {
@@ -132,6 +139,7 @@ body {
                 border: none;
             }
         }
+
         label {
             color: #00ade6;
             display: flex;
@@ -139,7 +147,7 @@ body {
             position: relative;
             display: block;
             margin-bottom: 3em;
-        
+
             .form-label {
                 z-index: 2;
                 transform: translateY(10px);
@@ -150,7 +158,7 @@ body {
                 pointer-events: none;
                 user-select: none;
             }
-        
+
             input {
                 z-index: 2;
                 width: 100%;
@@ -159,20 +167,21 @@ body {
                 outline: none;
                 color: white;
                 font-size: 18px;
-        
-                /* Apply the styles for :focus and :valid */
+
                 &:focus,
                 &:valid {
-                    
-                    & + .form-label {
-                        transform:translateX(-10px) translateY(-15px) scale(.8);
-                        & + .border {
+
+                    &+.form-label {
+                        transform: translateX(-10px) translateY(-15px) scale(.8);
+
+                        &+.border {
                             transform: scaleX(1);
                         }
                     }
                 }
             }
-            
+
+
             .border {
                 display: block;
                 background: #00ade6;
@@ -180,13 +189,12 @@ body {
                 height: 2px;
                 transition: background-color 0.3s;
             }
+
             &:focus-within {
                 .border {
                     background-color: white;
                 }
             }
         }
-        
-
     }
 }

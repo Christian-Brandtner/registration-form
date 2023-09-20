@@ -19,6 +19,11 @@ p {
   line-height: 1.8;
 }
 
+@media screen and (min-width: 768.11) {
+  .contact-container {
+    height: 512px;
+  }
+}
 body {
   min-height: 100vh;
   background: url("../assets/images/bg-registration-form-7.jpg") no-repeat;
@@ -39,7 +44,6 @@ body .contact-container {
   padding: 77px 99px 87px;
   width: 540px;
   max-width: 758px;
-  height: 512px;
   background: #39459b;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
@@ -97,14 +101,14 @@ body .main-form button .slide-bg {
   transition: transform 0.3s;
 }
 body .main-form button .fa-arrow-right {
-  transform: translateX(50%);
+  transform: translateX(65%);
   transition: transform 0.2s;
 }
 body .main-form button:hover {
   border: none;
 }
 body .main-form button:hover .fa-arrow-right {
-  transform: translateX(80%);
+  transform: translateX(95%);
 }
 body .main-form button:hover .slide-bg {
   display: block;
@@ -140,7 +144,6 @@ body .main-form label input {
   outline: none;
   color: white;
   font-size: 18px;
-  /* Apply the styles for :focus and :valid */
 }
 body .main-form label input:focus + .form-label, body .main-form label input:valid + .form-label {
   transform: translateX(-10px) translateY(-15px) scale(0.8);
