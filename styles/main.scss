@@ -29,172 +29,338 @@ p {
     line-height: 1.8;
 }
 
-@media screen and (min-width: 768.11) {
+@media screen and (min-width: 768.11px) {
     .contact-container {
         height: 512px;
     
     }
-}
-
-body {
-    min-height: 100vh;
-    background: url("../assets/images/bg-registration-form-7.jpg") no-repeat;
-    background-size: cover;
-    font-family: "Montserrat-Regular";
-
-    .wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .contact-container {
-        @include flex-center(row);
-        padding: 77px 99px 87px;
-        width: 540px;
-        max-width: 758px;
-       
-        background: #39459b;
-
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        border: 10px solid #0d99d7;
-    }
-
-    .main-form {
-        h3 {
-            text-transform: uppercase;
-            font-size: 45px;
-            font-family: "Montserrat-Bold";
-            text-align: center;
-            margin-bottom: 12px;
-        }
-
-        p {
-            padding: 0 10px;
-            margin-bottom: 55px;
-            line-height: 1.8;
-
-            color: #fff;
-            font-size: 15px;
-        }
-
-        h3,
-        p {
-
-            color: white;
-            text-align: center;
-        }
-
-        button {
-            border: none;
-            width: 162px;
-            height: 51px;
-            border: 2px solid #fff;
-            margin: auto;
-            margin-top: 60px;
-            cursor: pointer;
-            @include flex-center(auto);
-            padding: 0;
-            background: none;
-
-            color: #fff;
-            text-transform: uppercase;
-            font-family: "Montserrat-Bold";
-            position: relative;
-            transition: background-color 0.3s;
-            overflow: hidden;
-
-            .button-text {
-                z-index: 2;
+        body {
+            min-height: 100vh;
+            background: url("../assets/images/bg-registration-form-7.jpg") no-repeat;
+            background-size: cover;
+            font-family: "Montserrat-Regular";
+    
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
             }
-
-            .slide-bg {
-
-                position: absolute;
-                background: #2098D1;
-                width: 100%;
-                height: 100%;
-                transform: translateX(-100%);
-                transition: transform 0.3s;
+    
+            .contact-container {
+                @include flex-center(row);
+                padding: 77px 99px 87px;
+                width: 540px;
+                max-width: 758px;
+    
+                background: #39459b;
+    
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                border: 10px solid #0d99d7;
             }
-
-            .fa-arrow-right {
-                transform: translateX(65%);
-                transition: transform 0.2s;
-            }
-
-            &:hover {
-                .fa-arrow-right {
-                    transform: translateX(95%);
+    
+            .main-form {
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 45px;
+                    font-family: "Montserrat-Bold";
+                    text-align: center;
+                    margin-bottom: 12px;
                 }
-
-                .slide-bg {
+    
+                p {
+                    padding: 0 10px;
+                    margin-bottom: 55px;
+                    line-height: 1.8;
+    
+                    color: #fff;
+                    font-size: 15px;
+                }
+    
+                h3,
+                p {
+    
+                    color: white;
+                    text-align: center;
+                }
+    
+                button {
+                    border: none;
+                    width: 162px;
+                    height: 51px;
+                    border: 2px solid #fff;
+                    margin: auto;
+                    margin-top: 60px;
+                    cursor: pointer;
+                    @include flex-center(auto);
+                    padding: 0;
+                    background: none;
+    
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: "Montserrat-Bold";
+                    position: relative;
+                    transition: background-color 0.3s;
+                    overflow: hidden;
+    
+                    .button-text {
+                        z-index: 2;
+                    }
+    
+                    .slide-bg {
+    
+                        position: absolute;
+                        background: #2098D1;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateX(-100%);
+                        transition: transform 0.3s;
+                    }
+    
+                    .fa-arrow-right {
+                        transform: translateX(65%);
+                        transition: transform 0.2s;
+                    }
+    
+                    &:hover {
+                        .fa-arrow-right {
+                            transform: translateX(95%);
+                        }
+    
+                        .slide-bg {
+                            display: block;
+                            left: 0;
+                            transform: translateX(0%);
+                        }
+    
+                        border: none;
+                    }
+                }
+    
+                label {
+                    color: #00ade6;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
                     display: block;
-                    left: 0;
-                    transform: translateX(0%);
-                }
-
-                border: none;
-            }
-        }
-
-        label {
-            color: #00ade6;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            display: block;
-            margin-bottom: 3em;
-
-            .form-label {
-                z-index: 2;
-                transform: translateY(10px);
-                position: absolute;
-                left: 0;
-                font-size: 15px;
-                transition: font-size 0.3s, transform 0.3s;
-                pointer-events: none;
-                user-select: none;
-            }
-
-            input {
-                z-index: 2;
-                width: 100%;
-                background-color: transparent;
-                height: 43px;
-                outline: none;
-                color: white;
-                font-size: 18px;
-
-                &:focus,
-                &:valid {
-
-                    &+.form-label {
-                        transform: translateX(-10px) translateY(-15px) scale(.8);
-
-                        &+.border {
-                            transform: scaleX(1);
+                    margin-bottom: 3em;
+    
+                    .form-label {
+                        z-index: 2;
+                        transform: translateY(10px);
+                        position: absolute;
+                        left: 0;
+                        font-size: 15px;
+                        transition: font-size 0.3s, transform 0.3s;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+    
+                    input {
+                        z-index: 2;
+                        width: 100%;
+                        background-color: transparent;
+                        height: 43px;
+                        outline: none;
+                        color: white;
+                        font-size: 18px;
+    
+                        &:focus,
+                        &:valid {
+    
+                            &+.form-label {
+                                transform: translateX(-10px) translateY(-15px) scale(.8);
+    
+                                &+.border {
+                                    transform: scaleX(1);
+                                }
+                            }
+                        }
+                    }
+    
+    
+                    .border {
+                        display: block;
+                        background: #00ade6;
+                        width: 100%;
+                        height: 2px;
+                        transition: background-color 0.3s;
+                    }
+    
+                    &:focus-within {
+                        .border {
+                            background-color: white;
                         }
                     }
                 }
             }
+        }
+}
 
-
-            .border {
-                display: block;
-                background: #00ade6;
-                width: 100%;
-                height: 2px;
-                transition: background-color 0.3s;
+@media screen and (max-width:768px) {
+    body {
+            min-height: 100vh;
+            
+            font-family: "Montserrat-Regular";
+    
+            .wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
             }
-
-            &:focus-within {
-                .border {
-                    background-color: white;
+    
+            .contact-container {
+                @include flex-center(column);
+                
+                width: 100vw;
+                height: calc(100vh - 20px);
+                max-width: 758px;
+    
+                background: #39459b;
+    
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+                border: 10px solid #0d99d7;
+            }
+    
+            .main-form {
+                width: 90%;
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 2.35rem;
+                    font-family: "Montserrat-Bold";
+                    text-align: center;
+                    margin-bottom: 12px;
+                }
+    
+                p {
+                    padding: 0 10px;
+                    margin-bottom: 55px;
+                    line-height: 1.8;
+    
+                    color: #fff;
+                    font-size: 0.9rem;
+                    font-weight: lighter;
+                }
+    
+                h3,
+                p {
+    
+                    color: white;
+                    text-align: center;
+                }
+    
+                button {
+                    border: none;
+                    width: 162px;
+                    height: 51px;
+                    border: 2px solid #fff;
+                    margin: auto;
+                    margin-top: 60px;
+                    cursor: pointer;
+                    @include flex-center(auto);
+                    padding: 0;
+                    background: none;
+    
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: "Montserrat-Bold";
+                    position: relative;
+                    transition: background-color 0.3s;
+                    overflow: hidden;
+    
+                    .button-text {
+                        z-index: 2;
+                    }
+    
+                    .slide-bg {
+    
+                        position: absolute;
+                        background: #2098D1;
+                        width: 100%;
+                        height: 100%;
+                        transform: translateX(-100%);
+                        transition: transform 0.3s;
+                    }
+    
+                    .fa-arrow-right {
+                        transform: translateX(65%);
+                        transition: transform 0.2s;
+                    }
+    
+                    &:hover {
+                        .fa-arrow-right {
+                            transform: translateX(95%);
+                        }
+    
+                        .slide-bg {
+                            display: block;
+                            left: 0;
+                            transform: translateX(0%);
+                        }
+    
+                        border: none;
+                    }
+                }
+    
+                label {
+                    color: #00ade6;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    display: block;
+                    margin-bottom: 3em;
+    
+                    .form-label {
+                        z-index: 2;
+                        transform: translateY(10px);
+                        position: absolute;
+                        left: 0;
+                        font-size: 15px;
+                        transition: font-size 0.3s, transform 0.3s;
+                        pointer-events: none;
+                        user-select: none;
+                    }
+    
+                    input {
+                        z-index: 2;
+                        width: 100%;
+                        background-color: transparent;
+                        height: 43px;
+                        outline: none;
+                        color: white;
+                        font-size: 18px;
+    
+                        &:focus,
+                        &:valid {
+    
+                            &+.form-label {
+                                transform: translateX(-10px) translateY(-15px) scale(.8);
+    
+                                &+.border {
+                                    transform: scaleX(1);
+                                }
+                            }
+                        }
+                    }
+    
+    
+                    .border {
+                        display: block;
+                        background: #00ade6;
+                        width: 100%;
+                        height: 2px;
+                        transition: background-color 0.3s;
+                    }
+    
+                    &:focus-within {
+                        .border {
+                            background-color: white;
+                        }
+                    }
                 }
             }
         }
-    }
 }
